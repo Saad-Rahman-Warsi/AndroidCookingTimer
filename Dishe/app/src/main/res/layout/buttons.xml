@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!--tools:context=".fragment1"
+    android:background="@color/teal_200"-->
+    <LinearLayout
+        android:id="@+id/linlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+        <!---->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/butt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/pink"
+            app:srcCompat="@android:drawable/ic_media_play"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/butt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/pink"
+            app:srcCompat="@android:drawable/ic_media_pause" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/butt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/pink"
+            android:clickable="false"
+            app:srcCompat="@android:drawable/dialog_frame" />
+        <!--android:gravity="center_horizontal"
+android:layout_gravity="center_vertical"-->
+        <!--</com.google.android.material.floatingactonbutton.FloatingActionButton>
+      android:layout_centerInParent="true"-->
+    </LinearLayout>
+</LinearLayout>

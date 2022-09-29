@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Query"
+    android:id="@+id/query">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/query1"
+        >
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query"
+            android:textSize="@dimen/fontsize"
+            android:textColor="@color/teal_200"
+            android:layout_margin="@dimen/verticalmargin"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="datetime"></TextView>
+
+        <EditText
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontsize"
+            android:textColor="@color/teal_200"
+            android:layout_margin="@dimen/verticalmargin"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="datetime"></EditText>
+        <!--android:text="@string/query"-->
+        <Button
+            android:id="@+id/butt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/verticalmargin"></Button>
+    </LinearLayout>
+
+
+</FrameLayout>

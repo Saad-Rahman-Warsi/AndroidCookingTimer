@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dishe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <string name="stopwatch">Stopwatch</string>
+    <string name="start">Start</string>
+    <string name="timeup">Times Up!</string>
+    <string name="addwatch">Add StopWatch</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inv">Invalid Format</string>
+    <string name="dish">Add Dishes</string>
+    <string name="dis">Dishes</string>
+    <string name="query">Enter Name</string>
+    <string name="done">Done</string>
+</resources>
