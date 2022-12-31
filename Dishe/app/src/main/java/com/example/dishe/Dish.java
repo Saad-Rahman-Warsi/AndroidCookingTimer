@@ -98,7 +98,10 @@ public class Dish extends Fragment {
                 b.setTextColor(getResources().getColor(R.color.dark_green));
 
                 frame.addView(b, pam);
+
                 dishes[num] = new Dishdef(ma,s);
+                System.out.println("assigned to dishes");
+                System.out.println("num is when assigned"+num);
                 try {
                     ma.writeFile(ma.readFile()  + s + '\n' + "/"+'\n');
                 }
@@ -115,7 +118,8 @@ public class Dish extends Fragment {
                     q=new Query(back,f);
                     frat.replace(R.id.lay,q);
                     frat.commit();*/
-                        StopwatchFragment sf = new StopwatchFragment(ma,dishes[num], back);
+                        System.out.println("num is before sending"+num);
+                        StopwatchFragment sf = new StopwatchFragment(ma,dishes[num-1], back);
                         frat.replace(R.id.mainlay, sf);
                         frat.addToBackStack("back");
                         frat.commit();

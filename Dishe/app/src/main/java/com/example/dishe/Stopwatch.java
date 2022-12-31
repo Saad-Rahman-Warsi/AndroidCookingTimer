@@ -115,15 +115,15 @@ public class Stopwatch {
         //LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT,Gravity.CENTER);
         if (l!=null)
         {
-            System.out.println("l is not null");
+            //System.out.println("l is not null");
         }
         if (vi!=null)
         {
-            System.out.println("vi is not null");
+            //System.out.println("vi is not null");
         }
-        System.out.println("bonjour");
+        //System.out.println("bonjour");
         l.addView(vi);
-        System.out.println("bonjour");
+        //System.out.println("bonjour");
         //l.addView(medbut);
         start=(FloatingActionButton) vi.findViewById(R.id.butt1);
         pause=(FloatingActionButton) vi.findViewById(R.id.butt2);
@@ -323,7 +323,7 @@ public class Stopwatch {
                 //stationary=true;
                 e.setText(R.string.timeup);
                 e.setEnabled(true);
-                System.out.println("oui");
+                //System.out.println("oui");
                 Bundle bu=new Bundle();
                 String key="frag";
                 bu.putInt(key,1);
@@ -338,7 +338,7 @@ public class Stopwatch {
                     ;
                 }
                 Timeup tp=new Timeup(pre,dish,name,back);
-                System.out.println("oui");
+                //System.out.println("oui");
                 //fra.popFragment(tp);
 
                 //Bundle bdl=new Bundle();
@@ -434,11 +434,11 @@ public class Stopwatch {
         String stn;
         stn="";
         record=true;
-        System.out.println("nf=");
-        System.out.println(nf);
-        System.out.println("nf ends");
+        //System.out.println("nf=");
+        //System.out.println(nf);
+        //System.out.println("nf ends");
         while (!(stn.equals(name) && s.charAt(i) == '#')) {
-            System.out.println(s.charAt(i));
+            //System.out.println(s.charAt(i));
             if (record == true) {
                 if (s.charAt(i) == '#') {
                     //dishes[num] = new Dishdef(ma, dish);
@@ -473,8 +473,8 @@ public class Stopwatch {
         {
             ;
         }
-        System.out.println("newfile=");
-        System.out.println(newfile);
+        //System.out.println("newfile=");
+        //System.out.println(newfile);
     }
 }
 

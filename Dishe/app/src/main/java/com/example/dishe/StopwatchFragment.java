@@ -36,6 +36,15 @@ public class StopwatchFragment extends Fragment {
     {
         onceread=false;
     }
+    private void displaywatch()
+    {
+         for (int i=0;i<10;i++)
+         {
+             System.out.println("w["+i+"]="+w[i]);
+         }
+        System.out.println("file is");
+        System.out.println(ab.readFile());
+    }
     public StopwatchFragment(MainActivity ab, Dishdef d, Button back) {
         // Required empty public constructor
         w = d.getstopwatches();
@@ -45,6 +54,10 @@ public class StopwatchFragment extends Fragment {
         this.d = d;
         sf = this;
         this.ab = ab;
+        System.out.println("in constructor");
+        displaywatch();
+        System.out.println("out of constructor");
+      //  onceread=false;
     }
 
 
@@ -52,43 +65,62 @@ public class StopwatchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //System.out.println("onceread="+onceread);
         v = inflater.inflate(R.layout.fragment_stopwatch, container, false);
 
         add = (Button) v.findViewById(R.id.but1);
-        l = (LinearLayout) v.findViewById(R.id.lay);
+        l = (LinearLayout) v.findViewById(R.id.lay1);
         w = d.getstopwatches();
+        System.out.println("line no 74");
+        displaywatch();
         if (onceread==false) {
             readdishfromfile(inflater, container);
             onceread=true;
         }
-        int i=num;
+        int i=0;
+        System.out.println("initial value of i is"+i);
         while (w[i] != null) {
             //  Stopwatch s;
+            System.out.println("i="+i);
+            System.out.println(w[i]);
             View but = inflater.inflate(R.layout.buttons, container, false);
             w[i] = new Stopwatch(ab, sf, f, l, w[i], but);
             i++;
         }
+        System.out.println("line no 89");
+        displaywatch();
         if (i!=0)
         {
             num = i - 1;
         }
-
+        System.out.println("line no 95");
+        displaywatch();
         if (f.getArguments() != null) {
-            System.out.println("hola");
+            System.out.println("arguments are not null");
             Stopwatch s;
             View but = inflater.inflate(R.layout.buttons, container, false);
             Bundle bundle = f.getArguments();
             String str = bundle.getString("querywatch");
             if (str != null) {
                 s = new Stopwatch(-1, ab, sf, d.getName(), back, str, l, getResources().getColor(R.color.pink), getResources().getColor(R.color.teal_200), getResources().getDimension(R.dimen.height), but, getResources().getColor(R.color.red));
+                System.out.println("line no 105");
+                displaywatch();
                 d.addStopwatch(s);
+                System.out.println("LINE NO 108");
+                displaywatch();
                 //System.out.println("have a nice day");
                 writeStopwatch(str,-1);
+                System.out.println("LINE NO 112");
+                displaywatch();
                 //System.out.println("have a nice day");
                 num++;
-                w[num] = s;
+                //w[num] = s;
+                System.out.println("LINE 117");
+                displaywatch();
             }
         }
+        System.out.println("line no 121");
+        displaywatch();
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
